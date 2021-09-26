@@ -5,17 +5,14 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 
 public class PlayerClickPlayerEvent implements Listener {
     @EventHandler
-    public void ClickPlayer(EntityDamageByEntityEvent e) {
-        if(!e.getDamager().getType().equals(EntityType.PLAYER)) {
+    public void ClickPlayer(PlayerInteractAtEntityEvent e) {
+        if(!e.getRightClicked().getType().equals(EntityType.PLAYER)) {
             return;
         }
-        if(!e.getEntity().getType().equals(EntityType.PLAYER)) {
-            return;
-        }
-        RidePlayer.ride((Player)e.getDamager(),(Player)e.getEntity(),e);
+        RidePlayer.ride(e.getPlayer(),(Player)e.getRightClicked(),e);
     }
 }

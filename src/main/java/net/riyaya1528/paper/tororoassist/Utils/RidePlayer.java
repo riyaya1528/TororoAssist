@@ -4,6 +4,7 @@ import net.riyaya1528.paper.tororoassist.TororoAssist;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 
 
 public class RidePlayer {
@@ -21,7 +22,7 @@ public class RidePlayer {
     public static void enable(Player player) {
         playerdata.set(player.getUniqueId() + ".RideMode",true);
         Messenger.sendMessage(player,"§a§lモード:§e選択");
-        Messenger.sendMessage(player,"§bプレイヤーをクリックすると乗れます");
+        Messenger.sendMessage(player,"§bプレイヤーを右クリックすると乗れます");
 
     }
 
@@ -30,7 +31,7 @@ public class RidePlayer {
         Messenger.sendMessage(player,"§a§lモード:§e解除");
     }
 
-    public static void ride(Player FromPlayer, Player ToPlayer, EntityDamageByEntityEvent e) {
+    public static void ride(Player FromPlayer, Player ToPlayer, PlayerInteractAtEntityEvent e) {
         if(!playerdata.getBoolean(FromPlayer.getUniqueId() + ".RideMode")) {
             return;
         }
