@@ -1,6 +1,5 @@
 package net.riyaya1528.paper.tororoassist.Utils;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class Ping {

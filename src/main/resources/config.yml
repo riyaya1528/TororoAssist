@@ -1,0 +1,16 @@
+#ここは変更しないでね
+config_version : 1.0
+
+#コマンドのメッセージ関係
+command-message:
+  fly:
+    #flyの有効時
+    fly-allow: "§a§l飛行が有効になりました"
+    #flyの無効時
+    fly-deny: "§a§l飛行が無効になりました"
+    #パーミッション不足
+    permission: "§c§lパーミッションがありません"
+    #コマンド送信元がコンソール時
+    command-console: "§c§lこのコマンドはコンソール上から打てないよ"
+    #プレイヤーが存在しないとき
+    player-not-found: "§c§l存在するプレイヤーを入力してください"

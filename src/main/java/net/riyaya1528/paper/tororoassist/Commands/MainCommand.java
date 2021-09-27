@@ -1,9 +1,9 @@
 package net.riyaya1528.paper.tororoassist.Commands;
 
-import net.riyaya1528.paper.tororoassist.Utils.Hat;
-import net.riyaya1528.paper.tororoassist.Utils.HelpMessage;
-import net.riyaya1528.paper.tororoassist.Utils.Ping;
-import net.riyaya1528.paper.tororoassist.Utils.RidePlayer;
+import net.riyaya1528.paper.tororoassist.TororoAssist;
+import net.riyaya1528.paper.tororoassist.Utils.*;
+import net.riyaya1528.paper.tororoassist.Utils.MenuGUI.MainMenuGUI;
+import net.riyaya1528.paper.tororoassist.Utils.MenuGUI.SettingsMenuGUI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -32,6 +32,23 @@ public class MainCommand implements CommandExecutor {
                     RidePlayer.switchPlayer((Player) sender);
                     return true;
 
+                } else if (args[0].equals("menu")) {
+                    MainMenuGUI.openMainMenu((Player)sender);
+                    return true;
+
+                } else if (args[0].equals("settings")) {
+                    SettingsMenuGUI.openSettingsMenuGUI((Player)sender);
+                    return true;
+
+                } else if (args[0].equals("fly")) {
+                    if(!(sender instanceof Player)) {
+                        TororoAssist.instance.getLogger().info(TororoAssist.instance.getConfig().getString("command-message.command-console"));
+
+                    }else {
+                        Fly.fly((Player) sender, args);
+
+                    }
+                    return true;
                 }
 
             } else {

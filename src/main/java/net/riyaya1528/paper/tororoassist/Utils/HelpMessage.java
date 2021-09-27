@@ -10,5 +10,7 @@ public class HelpMessage {
         Messenger.sendMessage(player,"§d/tororo ping");
         Messenger.sendMessage(player,"§d/tororo hat");
         Messenger.sendMessage(player,"§d/tororo ride");
+        Messenger.sendMessage(player,"§d/tororo menu");
+        Messenger.sendMessage(player,"§d/tororo settings");
     }
 }

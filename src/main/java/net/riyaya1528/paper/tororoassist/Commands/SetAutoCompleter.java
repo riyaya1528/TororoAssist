@@ -15,6 +15,7 @@ public class SetAutoCompleter implements TabCompleter {
         list.add("ping");
         list.add("hat");
         list.add("ride");
+        list.add("menu");
         list.add("settings");
 
         if(cmd.getName().equalsIgnoreCase("tororo") && args.length == 1) return list;
