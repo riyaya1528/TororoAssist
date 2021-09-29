@@ -3,10 +3,7 @@ package net.riyaya1528.paper.tororoassist;
 import net.riyaya1528.paper.tororoassist.Commands.MainCommand;
 import net.riyaya1528.paper.tororoassist.Commands.SetAutoCompleter;
 import net.riyaya1528.paper.tororoassist.Data.PlayerData;
-import net.riyaya1528.paper.tororoassist.Events.InventoryClickEvent;
-import net.riyaya1528.paper.tororoassist.Events.PlayerBlockBreakeEvent;
-import net.riyaya1528.paper.tororoassist.Events.PlayerClickPlayerEvent;
-import net.riyaya1528.paper.tororoassist.Events.SummonThunderboltEvent;
+import net.riyaya1528.paper.tororoassist.Events.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class TororoAssist extends JavaPlugin {
@@ -23,6 +20,7 @@ public final class TororoAssist extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SummonThunderboltEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBlockBreakeEvent(),this);
         getServer().getPluginManager().registerEvents(new InventoryClickEvent(),this);
+        getServer().getPluginManager().registerEvents(new PlayerClickCropsEvent(),this);
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         getCommand("tororo").setExecutor(new MainCommand());
         getCommand("tororo").setTabCompleter(new SetAutoCompleter());
