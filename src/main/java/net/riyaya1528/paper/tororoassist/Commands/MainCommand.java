@@ -49,6 +49,9 @@ public class MainCommand implements CommandExecutor {
 
                     }
                     return true;
+                } else if (args[0].equals("emoji")) {
+
+
                 }
 
             } else {

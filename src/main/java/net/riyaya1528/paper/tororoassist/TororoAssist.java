@@ -16,19 +16,27 @@ public final class TororoAssist extends JavaPlugin {
         playerdataconfig = new PlayerData(this);
         playerdataconfig.saveDefaultConfig();
         saveDefaultConfig();
-        getServer().getPluginManager().registerEvents(new PlayerClickPlayerEvent(),this);
-        getServer().getPluginManager().registerEvents(new SummonThunderboltEvent(),this);
-        getServer().getPluginManager().registerEvents(new PlayerBlockBreakeEvent(),this);
-        getServer().getPluginManager().registerEvents(new InventoryClickEvent(),this);
-        getServer().getPluginManager().registerEvents(new PlayerClickCropsEvent(),this);
+        registerEvents();
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
-        getCommand("tororo").setExecutor(new MainCommand());
-        getCommand("tororo").setTabCompleter(new SetAutoCompleter());
         getLogger().info("The plugin has beed enable");
     }
 
     @Override
     public void onDisable() {
         getLogger().info("The plugin has beed disable");
+    }
+
+    public void registerEvents() {
+        getServer().getPluginManager().registerEvents(new PlayerClickPlayerEvent(),this);
+        getServer().getPluginManager().registerEvents(new SummonThunderboltEvent(),this);
+        getServer().getPluginManager().registerEvents(new PlayerBlockBreakeEvent(),this);
+        getServer().getPluginManager().registerEvents(new InventoryClickEvent(),this);
+        getServer().getPluginManager().registerEvents(new PlayerClickCropsEvent(),this);
+        getServer().getPluginManager().registerEvents(new PlayerSendEmojiChatEvent(),this);
+    }
+
+    public void registerCommandExcuters() {
+        getCommand("tororo").setExecutor(new MainCommand());
+        getCommand("tororo").setTabCompleter(new SetAutoCompleter());
     }
 }
