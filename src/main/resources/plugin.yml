@@ -1,0 +1,14 @@
+name: TororoAssist
+version: '${project.version}'
+main: net.riyaya1528.paper.tororoassist.TororoAssist
+api-version: 1.17
+commands:
+  tororo:
+    description: "Tororo Assist"
+permissions:
+  TororoAssist.MenuShow.membership:
+    description: "Show membership menu"
+  TororoAssist.Fly:
+    description:  "Can fly Command"
+  TororoAssist.MenuShow.admin:
+    description: "Show admin menu"
