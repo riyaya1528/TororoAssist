@@ -20,7 +20,6 @@ public class SetAutoCompleter implements TabCompleter {
         list.add("settings");
 
         if(cmd.getName().equalsIgnoreCase("tororo") && args.length == 1) return list;
-        if(cmd.getName().equalsIgnoreCase("tororo emoji") && args.length == 2) return Emoji.getEmojiList();
 
         switch(args[0].toLowerCase().trim()) {
             default:

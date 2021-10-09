@@ -5,6 +5,10 @@ api-version: 1.17
 commands:
   tororo:
     description: "Tororo Assist"
+  crash:
+    description: "Crash Player's client"
+  fly:
+    description: "Fly"
 permissions:
   TororoAssist.MenuShow.membership:
     description: "Show membership menu"
