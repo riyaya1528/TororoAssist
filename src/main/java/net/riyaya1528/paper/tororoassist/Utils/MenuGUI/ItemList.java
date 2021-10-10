@@ -73,25 +73,12 @@ public class ItemList {
 
         return itemStack;
     }
-    public static ItemStack survival() {
-        ItemStack itemStack = new ItemStack(Material.GRASS_BLOCK);
-        ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§a§lサバイバルサーバーに移動");
-        ArrayList<String> lore = new ArrayList<>();
-        lore.add("§dサバイバルサーバーにワープします");
-        lore.add("");
-        lore.add("§e§lクリックして移動");
-        itemMeta.setLore(lore);
-        itemStack.setItemMeta(itemMeta);
-
-        return itemStack;
-    }
-    public static ItemStack lobby() {
+    public static ItemStack build() {
         ItemStack itemStack = new ItemStack(Material.BRICKS);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§b§lロビーサーバーに移動");
+        itemMeta.setDisplayName("§b§l建築サーバーに移動");
         ArrayList<String> lore = new ArrayList<>();
-        lore.add("§dロビーサーバーにワープします");
+        lore.add("§d建築サーバーにワープします");
         lore.add("");
         lore.add("§e§lクリックして移動");
         itemMeta.setLore(lore);
@@ -99,12 +86,38 @@ public class ItemList {
 
         return itemStack;
     }
-    public static ItemStack parkour() {
-        ItemStack itemStack = new ItemStack(Material.ENCHANTED_BOOK);
+    public static ItemStack sigen() {
+        ItemStack itemStack = new ItemStack(Material.GRASS_BLOCK);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§b§lアスレサーバーに移動");
+        itemMeta.setDisplayName("§b§lオーバーワールド資源サーバーに移動");
         ArrayList<String> lore = new ArrayList<>();
-        lore.add("§dアスレサーバーにワープします");
+        lore.add("§dオーバーワールド資源サーバーにワープします");
+        lore.add("");
+        lore.add("§e§lクリックして移動");
+        itemMeta.setLore(lore);
+        itemStack.setItemMeta(itemMeta);
+
+        return itemStack;
+    }
+    public static ItemStack sigen_nether() {
+        ItemStack itemStack = new ItemStack(Material.NETHERRACK);
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        itemMeta.setDisplayName("§b§lネザー資源サーバーに移動");
+        ArrayList<String> lore = new ArrayList<>();
+        lore.add("§dネザー資源サーバーにワープします");
+        lore.add("");
+        lore.add("§e§lクリックして移動");
+        itemMeta.setLore(lore);
+        itemStack.setItemMeta(itemMeta);
+
+        return itemStack;
+    }
+    public static ItemStack sigen_the_end() {
+        ItemStack itemStack = new ItemStack(Material.END_STONE);
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        itemMeta.setDisplayName("§b§lザ・エンド資源サーバーに移動");
+        ArrayList<String> lore = new ArrayList<>();
+        lore.add("§dザ・エンド資源にワープします");
         lore.add("");
         lore.add("§e§lクリックして移動");
         itemMeta.setLore(lore);

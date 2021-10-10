@@ -18,10 +18,13 @@ public class ServerMenuGUI {
         }
         n = 0;
 
-        inv.setItem(12,ItemList.lobby());
-        inv.setItem(13,ItemList.survival());
-        inv.setItem(14, ItemList.parkour());
+        inv.setItem(11,ItemList.build());
+        inv.setItem(13,ItemList.sigen());
+        inv.setItem(14, ItemList.sigen_nether());
+        inv.setItem(15, ItemList.sigen_the_end());
         inv.setItem(22,ItemList.close());
+        inv.setItem(23,ItemList.close());
+
         return inv;
     }
 }

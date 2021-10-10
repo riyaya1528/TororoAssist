@@ -18,20 +18,27 @@ public class Action {
 
     }
 
-    public static void warpSurvival(Player player) {
-        ServerSender.suvival(player);
+
+    public static void warpBuild(Player player) {
+        ServerSender.build(player);
 
     }
 
-    public static void warpLobby(Player player) {
-        ServerSender.lobby(player);
+    public static void warpSigen(Player player) {
+        ServerSender.sigen(player);
 
     }
 
-    public static void warpParkour(Player player) {
-        ServerSender.parkour(player);
+    public static void warpSigenNether(Player player) {
+        ServerSender.sigenNether(player);
 
     }
+
+    public static void warpSigenTheEnd(Player player) {
+        ServerSender.sigenTheEnd(player);
+
+    }
+
     public static void gamemodeChange(Player player) {
         if (player.getGameMode().equals(GameMode.ADVENTURE)) {
             player.setGameMode(GameMode.SURVIVAL);

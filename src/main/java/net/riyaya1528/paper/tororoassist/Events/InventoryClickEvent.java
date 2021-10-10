@@ -39,14 +39,17 @@ public class InventoryClickEvent implements Listener {
 
             } else if (e.getView().getTitle().equals("§9§lサーバーメニュー")) {
                 e.setCancelled(true);
-                if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.lobby().getItemMeta().getDisplayName())) {
-                    Action.warpLobby(player);
+                if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.build().getItemMeta().getDisplayName())) {
+                    Action.warpBuild(player);
 
-                } else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.survival().getItemMeta().getDisplayName())) {
-                    Action.warpSurvival(player);
+                } else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.sigen().getItemMeta().getDisplayName())) {
+                    Action.warpSigen(player);
 
-                } else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.parkour().getItemMeta().getDisplayName())) {
-                    Action.warpParkour(player);
+                } else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.sigen_nether().getItemMeta().getDisplayName())) {
+                    Action.warpSigenNether(player);
+
+                }else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.sigen_the_end().getItemMeta().getDisplayName())) {
+                    Action.warpSigenTheEnd(player);
 
                 }else if (e.getInventory().getItem(e.getSlot()).getItemMeta().getDisplayName().equals(ItemList.close().getItemMeta().getDisplayName())) {
                     Action.closeInventory(player);
